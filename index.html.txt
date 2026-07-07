@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="loading">
+
+    <div class="heart-loader"></div>
+
+    <h2>กำลังเตรียมเซอร์ไพรส์สำหรับเด็กอ้วน...</h2>
+
+</div>
+
+
+<div id="hearts"></div>
+
+<div id="petals"></div>
+
+
+
+<section id="envelopePage">
+
+    <div class="envelope">
+
+        <div class="letter">
+
+            <h1>
+
+                ถึง
+
+            </h1>
+
+            <h2>
+
+                Happy Birthday เด็กอ้วน ❤️
+
+            </h2>
+
+        </div>
+
+        <div class="cover"></div>
+
+    </div>
+
+    <button id="openBtn">
+
+        💌 เปิดจดหมาย
+
+    </button>
+
+</section>
+
+
+
+<section id="letterPage">
+
+<div class="glass">
+
+<h1>Happy Birthday 🎂</h1>
+
+<img src="assets/photo.jpg" class="photo">
+
+<div id="typing"></div>
+
+<button id="loveBtn">
+
+💖 กดตรงนี้สิอ้วน
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<div id="popup">
+
+<div class="popup-card">
+
+<h1>
+
+❤️
+
+</h1>
+
+<h2>
+
+ขอบคุณที่เข้ามาเป็นความสุขของเค้านะ
+
+</h2>
+
+<p>
+
+ของขวัญที่ดีที่สุดของเค้า...
+
+คือการมีอ้วนอยู่ในทุกๆวัน
+
+</p>
+
+<button id="closePopup">
+
+รักเหมือนกัน 💕
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<audio id="openSound">
+
+<source src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
+
+</audio>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
