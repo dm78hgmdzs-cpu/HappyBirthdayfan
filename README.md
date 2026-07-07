@@ -1,1 +1,218 @@
-# HappyBirthdayfan
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="loading">
+
+    <div class="heart-loader"></div>
+
+    <h2>กำลังเตรียมเซอร์ไพรส์สำหรับเด็กอ้วน...</h2>
+
+</div>
+
+
+<div id="hearts"></div>
+
+<div id="petals"></div>
+
+
+
+<section id="envelopePage">
+
+    <div class="envelope">
+
+        <div class="letter">
+
+            <h1>
+
+                ถึง
+
+            </h1>
+
+            <h2>
+
+                Happy Birthday เด็กอ้วน ❤️
+
+            </h2>
+
+        </div>
+
+        <div class="cover"></div>
+
+    </div>
+
+    <button id="openBtn">
+
+        💌 เปิดจดหมาย
+
+    </button>
+
+</section>
+
+
+
+<section id="letterPage">
+
+<div class="glass">
+
+<h1>Happy Birthday 🎂</h1>
+
+<img src="assets/photo.jpg" class="photo">
+
+<div id="typing"></div>
+
+<button id="loveBtn">
+
+💖 กดตรงนี้สิอ้วน
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<div id="popup">
+
+<div class="popup-card">
+
+<h1>
+
+❤️
+
+</h1>
+
+<h2>
+
+ขอบคุณที่เข้ามาเป็นความสุขของเค้านะ
+
+</h2>
+
+<p>
+
+ของขวัญที่ดีที่สุดของเค้า...
+
+คือการมีอ้วนอยู่ในทุกๆวัน
+
+</p>
+
+<button id="closePopup">
+
+รักเหมือนกัน 💕
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<audio id="openSound">
+
+<source src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
+
+</audio>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>*{margin:0;padding:0;box-sizing:border-box;}
+
+body{font-family:'Itim',cursive;overflow:hidden;height:100vh;background:linear-gradient(135deg,#ffd6e8,#ffeef6,#fff5fb);display:flex;justify-content:center;align-items:center;}
+
+/* Loading */
+
+#loading{position:fixed;width:100%;height:100%;background:#ffd8ea;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999;transition:1s;}
+
+.heart-loader{width:70px;height:70px;background:#ff4f8b;transform:rotate(-45deg);animation:beat 1s infinite;}
+
+.heart-loader:before,
+
+.heart-loader:after{content:"";position:absolute;width:70px;height:70px;background:#ff4f8b;border-radius:50%;}
+
+.heart-loader:before{top:-35px;}
+
+.heart-loader:after{left:35px;}
+
+@keyframes beat{0%{transform:rotate(-45deg) scale(1);}50%{transform:rotate(-45deg) scale(1.15);}100%{transform:rotate(-45deg) scale(1);}}
+
+/* หน้าแรก */
+
+#envelopePage{display:flex;flex-direction:column;align-items:center;gap:30px;}
+
+.envelope{position:relative;width:340px;height:230px;background:#ff8fb4;border-radius:12px;box-shadow:0 25px 60px rgba(0,0,0,.25);overflow:hidden;}
+
+.cover{position:absolute;width:100%;height:100%;background:linear-gradient(#ff9ec1,#ff6ea0);clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);transition:1s;z-index:3;}
+
+.letter{position:absolute;width:90%;height:85%;left:5%;top:10%;background:white;border-radius:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;transition:1s;z-index:1;}
+
+.letter h1{font-family:'Great Vibes';font-size:55px;color:#ff3d7b;}
+
+.letter h2{font-size:28px;text-align:center;color:#ff5b8d;margin-top:10px;}
+
+#openBtn{padding:16px 40px;font-size:22px;border:none;border-radius:50px;background:#ff5d9e;color:white;cursor:pointer;box-shadow:0 10px 30px rgba(255,0,100,.35);transition:.3s;}
+
+#openBtn:hover{transform:scale(1.08);}
+
+/* หน้าข้อความ */
+
+#letterPage{display:none;position:absolute;width:100%;height:100%;justify-content:center;align-items:center;padding:20px;}
+
+.glass{width:95%;max-width:700px;background:rgba(255,255,255,.35);backdrop-filter:blur(18px);border-radius:30px;padding:30px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.15);}
+
+.glass h1{font-size:45px;color:#ff3c7b;margin-bottom:20px;}
+
+.photo{width:260px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,.25);margin-bottom:25px;transition:.4s;}
+
+.photo:hover{transform:scale(1.04);}
+
+#typing{font-size:22px;line-height:2;white-space:pre-line;color:#444;margin-bottom:30px;min-height:250px;}
+
+#loveBtn{padding:18px 35px;font-size:20px;background:#ff3d82;color:white;border:none;border-radius:50px;cursor:pointer;box-shadow:0 10px 25px rgba(255,0,120,.35);}
+
+/* Popup */
+
+#popup{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,.45);justify-content:center;align-items:center;z-index:999;}
+
+.popup-card{background:white;padding:40px;border-radius:25px;text-align:center;max-width:420px;animation:pop .4s;}
+
+@keyframes pop{from{transform:scale(.5);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+#closePopup{margin-top:20px;padding:14px 25px;border:none;background:#ff4c93;color:white;border-radius:30px;cursor:pointer;}
+
+/* หัวใจลอย */
+
+#hearts{position:fixed;width:100%;height:100%;pointer-events:none;overflow:hidden;}
+
+.heart{position:absolute;color:#ff5b93;font-size:20px;animation:float 8s linear infinite;}
+
+@keyframes float{0%{transform:translateY(100vh);opacity:0;}10%{opacity:1;}100%{transform:translateY(-120px);opacity:0;}}
+
+/* Responsive */
+
+@media(max-width:768px){.glass{padding:20px;}.photo{width:220px;}
+
+.letter h1{font-size:45px;}
+
+.letter h2{font-size:22px;}
+
+#typing{font-size:18px;}}
